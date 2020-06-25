@@ -23,8 +23,8 @@ def upgrade():
     sa.Column('url', sa.String(), nullable=True),
     sa.Column('name', sa.String(), nullable=True),
     sa.Column('ticker', sa.String(), nullable=True),
-    sa.Column('first_price', sa.Integer(), nullable=True),
-    sa.Column('last_price', sa.Integer(), nullable=True),
+    sa.Column('first_price', sa.Numeric(), nullable=True),
+    sa.Column('last_price', sa.Numeric(), nullable=True),
     sa.Column('first_date', sa.Date(), nullable=True),
     sa.Column('last_date', sa.Date(), nullable=True),
     sa.PrimaryKeyConstraint('id')
