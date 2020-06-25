@@ -1,5 +1,4 @@
 from app import db
-from sqlalchemy.dialects.postgresql import JSON, NUM, STR, DATE
 
 
 class StockSet(db.Model):
@@ -7,10 +6,12 @@ class StockSet(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.String(), nullable=True)
-    first_price = db.Column(NUM)
-    last_price = db.Column(NUM)
-    first_date = db.Columnn(DATE)
-    last_date = db.Column(DATE)
+    name = db.Column(db.String())
+    ticker = db.Column(db.String())
+    first_price = db.Column(db.Integer())
+    last_price = db.Column(db.Integer())
+    first_date = db.Column(db.Date())
+    last_date = db.Column(db.Date())
 
     def __init__(self, url, first_price, last_price, first_date, last_date):
         self.url = url

@@ -11,6 +11,8 @@ pandas = "*"
 sqlalchemy = "*"
 python-dotenv = "*"
 flask-sqlalchemy = "*"
+flask-migrate = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"
