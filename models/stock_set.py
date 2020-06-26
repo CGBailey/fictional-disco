@@ -13,9 +13,11 @@ class StockSet(db.Model):
     first_date = db.Column(db.Date())
     last_date = db.Column(db.Date())
 
-    def __init__(self, url, first_price, last_price, first_date, last_date):
+    def __init__(self, url, first_price, last_price, first_date, last_date, name, ticker):
         self.url = url
         self.first_price = first_price
         self.last_price = last_price
         self.first_date = first_date
         self.last_date = last_date
+        self.name = name
+        self.ticker = ticker
